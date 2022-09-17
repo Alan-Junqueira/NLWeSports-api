@@ -7,6 +7,8 @@ import { convertMinutesToHourString } from './utils/convert-minutes-to-hour-stri
 
 const app = express();
 
+const port = process.env.PORT || 3333
+
 app.use(express.json());
 app.use(cors())
 
@@ -98,4 +100,4 @@ app.get('/ads/:id/discord', async (req, res) => {
   });
 });
 
-app.listen(3333);
+app.listen(port);
